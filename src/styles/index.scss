@@ -1,0 +1,162 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+       height: 90%;
+    width: 100%;
+    background-color: aqua;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+    height: 100%;
+}
+
+
+//HEADER
+
+.about-game{
+    position: absolute;
+    top: 64px;
+    right: 28px;
+    cursor: pointer;
+    .hidden-info{
+        display: none;
+        width: 200px;
+        top: 5px;
+        right:55px;
+        background-color:rgb(8, 155, 155);
+        position: absolute;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+    .info-icon{
+        height: 50px;
+    }
+    &:hover{
+        .hidden-info{
+            width: 250px;
+            top: 5px;
+            right:55px;
+            background-color:rgb(4, 227, 227);
+            display: inline-block;
+            position: absolute;
+            border-radius: 10px;
+            z-index: 1000;
+            &:hover{
+                display: inline-block;
+            }
+            .info{
+                padding: 10px;
+                color: white;
+                font-family: 'Luckiest Guy', cursive;
+            }
+        }
+    }
+}
+
+.highscore{
+    position: absolute;
+    font-size: 30px;
+    top: 33px;
+    right: 24px;
+    color: white;
+    font-family: "Luckiest Guy", cursive;
+}
+
+// MAIN_COMPONENT
+
+.main-component{
+    position: absolute;
+    align-self: center;
+    width: 75%;
+    height: 75%;
+    border-radius: 10px;
+    z-index: 100;
+    flex-shrink: 0;
+    .header-info{
+        height: 15%;
+        text-align: center;
+        transform: translateY(-52px);
+        .game-title{
+            font-family: 'Bangers', cursive;
+            color: white;
+            font-size: 100px;
+        }
+        .made-by{
+            font-family: 'Luckiest Guy', cursive;
+            color: white;
+        }
+    }
+    .game-component{
+        background-color: white;
+        height: 85%;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+// FOOTER
+
+.footer{
+    height: 10%;
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    bottom: 5px;
+    .links{
+        height: 100%;
+        width: 100%;
+        .github{
+            color: black;
+            #github{
+                color: black;
+                height: 100px;
+            }
+        }
+    }
+    
+}
