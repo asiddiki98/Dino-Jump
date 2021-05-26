@@ -74,13 +74,19 @@ html{
     }
     .info-icon{
         height: 50px;
+        -webkit-filter: drop-shadow(1px 1px 0px #ff0000);
+        filter:         drop-shadow(1px 1px 0px #ff0000); 
+        transition: 0.3s;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
     &:hover{
         .hidden-info{
             width: 250px;
             top: 5px;
             right:55px;
-            background-color:rgb(4, 227, 227);
+            background-color:rgb(0, 33, 33);
             display: inline-block;
             position: absolute;
             border-radius: 10px;
@@ -92,6 +98,7 @@ html{
                 padding: 10px;
                 color: white;
                 font-family: 'Luckiest Guy', cursive;
+                text-shadow: 1px 1px 0px #ff0000;
             }
         }
     }
@@ -104,6 +111,7 @@ html{
     right: 24px;
     color: white;
     font-family: "Luckiest Guy", cursive;
+    text-shadow: 1px 1px 0px #ff0000;
 }
 
 // MAIN_COMPONENT
@@ -116,6 +124,7 @@ html{
     border-radius: 10px;
     z-index: 100;
     flex-shrink: 0;
+    
     .header-info{
         height: 15%;
         text-align: center;
@@ -124,10 +133,31 @@ html{
             font-family: 'Bangers', cursive;
             color: white;
             font-size: 100px;
+            text-shadow: 2px 2px 0px #ff0000;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+            .js{
+                height: 20px;
+                -webkit-filter: drop-shadow(1px 1px 0px #ff0000);
+                filter:         drop-shadow(1px 1px 0px #ff0000); 
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
         }
         .made-by{
             font-family: 'Luckiest Guy', cursive;
             color: white;
+            text-shadow: 1px 1px 0px #ff0000;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+
+       
         }
     }
     .game-component{
@@ -135,6 +165,7 @@ html{
         height: 85%;
         width: 100%;
         border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.377), 0 8px 16px rgba(0, 0, 0, 0.356);
     }
 }
 
@@ -153,15 +184,33 @@ html{
         .github{
             height: 100px;
             padding-right: 5px;
+            -webkit-filter: drop-shadow(1px 1px 0px #ff0000);
+            filter:         drop-shadow(1px 1px 0px #ff0000); 
+            transition: 0.3s;
+        &:hover{
+            transform: scale(1.1);
+        }
         }
         .angel{
             height: 100px;
             padding-right: 5px;
+            -webkit-filter: drop-shadow(1px 1px 0px #ff0000);
+            filter:         drop-shadow(1px 1px 0px #ff0000); 
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+        }
         }
         .linked{
             height: 100px;
             padding-right: 5px;
+            -webkit-filter: drop-shadow(1px 1px 0px #ff0000);
+            filter:         drop-shadow(1px 1px 0px #ff0000); 
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
-    }
     
+    }
 }
