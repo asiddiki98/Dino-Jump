@@ -7,7 +7,7 @@ class Dino {
        this.dino.classList.add("jump-animation") 
        setTimeout(() => {
            this.dino.classList.remove("jump-animation")
-       }, 400);
+       }, 500);
     }
 
 }

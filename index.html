@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="./src/images/dino.png">
 
-    <title>Dino Jump</title>
+    <title>Dino Might</title>
        
   </head>
 
@@ -25,7 +25,8 @@
         optio, eaque rerum! Provident similique accusantium nemo autem</p>
       </div>
     </div>
-    <p class="highscore" >0 : Highscore</p>
+    <p class="score" id="score"> 0 : score</p>
+    <p class="highscore" id="highscore" >0 : Highscore</p>
 
     <div class="main-component" >
       <div class="header-info">
@@ -33,6 +34,11 @@
         <h2 class="made-by"> developed by Azim Siddiki </h2>
       </div>
       <div class="game-component" id="game-component">
+        <div class="start-game" id="start-game">
+          <p class="start-game-instructions">click start to play</p>
+          <button class="start-button" id="start-button">start</button>
+          </div>
+
         <div class="dino" id="dino">
         </div>
 
