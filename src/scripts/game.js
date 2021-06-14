@@ -6,13 +6,15 @@ import Dino from './dino'
 
 class Game{
     constructor(){
-        this.dino = new Dino()
-        this.bomb = new Bomb()
-        this.score = document.getElementById("score")
-        this.highscore = document.getElementById("highscore")
+        this.dino = new Dino();
+        this.bomb = new Bomb();
+        this.score = document.getElementById("score");
+        this.highscore = document.getElementById("highscore");
+        this.instruction = document.getElementById("instructions");
     }
 
     play(){
+
         if (document.getElementById("game-component").classList.contains("game-component")){
             document.getElementById("game-component").classList.remove("game-component")
             document.getElementById("game-component").classList.add("play-game-component")
@@ -27,9 +29,12 @@ class Game{
         
         let scoreInterval = setInterval(() => {
             this.score.innerText = `${score++} : score`;
+            this.instruction.innerText = ` your score was ${score - 1}!\n you can do better :P \n play again?`;
+            this.instruction.innerHTML = this.instruction.innerHTML.replace(`${score - 1}`, `<span style="color: skyblue;">${score - 1}</span>`);
 
             if (score > highscore){
                 this.highscore.innerText = `${highscore++} : highscore`;
+                this.instruction.innerText = ` you beat your highscore!!! \n play again?`;
             }
         }, 100)
         
@@ -51,6 +56,7 @@ class Game{
             if (bombLeft > dinoLeft && bombLeft < (dinoLeft +  dinoWidth - 100)  && dinoTop > bombtop ){ 
                 this.bomb.explode() 
                 this.lost()
+                
                 clearInterval(scoreInterval)
                 clearInterval(game)
             }
@@ -64,9 +70,14 @@ class Game{
         if (document.getElementById("game-component").classList.contains("play-game-component")) {
             document.getElementById("game-component").classList.remove("play-game-component")
             document.getElementById("game-component").classList.add("game-component")
+            this.score.innerText = "0 : score";
+            return true
+        } else {
+            return false
         }
 
-        this.score.innerText="0 : score"
+        // this.instruction.innerText = `${this.score}`
+        // this.score.innerText="0 : score";
     }
  
 
