@@ -2,4 +2,8 @@ import "./styles/index.scss";
 import Game from './scripts/game'
 import Dino from './scripts/dino'
 let game = new Game()
-game.play()
+
+let start = document.getElementById("start-button")
+
+start.onclick = () => game.play() 
+
