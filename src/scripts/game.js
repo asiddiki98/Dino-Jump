@@ -45,14 +45,19 @@ class Game{
                 
             }
             if (score == 300){
-                this.background.style.animationDelay = "-1.005s"
-                this.background.style.animationDuration = `375000000s`
-                this.bomb.bomb.style.animationDelay = "-1.005s"
-                this.bomb.bomb.style.animationDuration = `0.625s`
+                this.background.style.animationDelay = "0.8s"
+                this.background.style.animationDuration = `562500000s`
+                this.bomb.bomb.style.animationDelay = "-0.8s"
+                this.bomb.bomb.style.animationDuration = `0.9375s`
                 
             }
+            if (score == 500) {
+                this.background.style.animationDelay = "0.8s"
+                this.background.style.animationDuration = `375000000s`
+                this.bomb.bomb.style.animationDelay = "-0.8s"
+                this.bomb.bomb.style.animationDuration = `0.625s`
 
-          
+            }
             if (score > highscore){
                 this.highscore.innerText = `${highscore++} : highscore`;
                 this.instruction.innerText = ` you beat your highscore!!! \n play again?`;
@@ -79,9 +84,9 @@ class Game{
             
             if (bombLeft > dinoLeft && bombLeft < (dinoLeft +  dinoWidth - 100)  && dinoTop > bombtop ){ 
                 this.lost()
-                
                 clearInterval(scoreInterval)
                 clearInterval(game)
+                consol.log("lost")
             }
 
 
