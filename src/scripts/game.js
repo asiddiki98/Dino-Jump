@@ -16,7 +16,9 @@ class Game{
     }
 
     play(){
+        this.background.style.animationDelay = "0s"
         this.background.style.animationDuration = "1500000000s"
+        this.bomb.bomb.style.animationDelay="0s"
         this.bomb.bomb.style.animationDuration = "2.5s"
 
         if (document.getElementById("game-component").classList.contains("game-component")){
@@ -34,30 +36,21 @@ class Game{
             this.score.innerText = `${score++} : score`;
             this.instruction.innerText = ` your score was ${score - 1}!\n you can do better :P \n play again?`;
             this.instruction.innerHTML = this.instruction.innerHTML.replace(`${score - 1}`, `<span style="color: skyblue;">${score - 1}</span>`);
-            // if (score == 75){
-            //     this.background.style.animationDuration = `1425000000s`
-            //     this.bomb.bomb.style.animationPlayState = "initial"
-            //     this.bomb.bomb.style.animationDuration = `2.375s`
+            if (score == 150){
+                this.background.style.animationDelay = "-1.005s"
+                this.background.style.animationDuration = `750000000s`
+                this.bomb.bomb.style.animationDelay = "-1.005s"
+                this.bomb.bomb.style.animationDuration = `1.25s`
 
                 
-            // }
-            // if (score == 150){
-            //     this.background.style.animationDuration = `1350000000s`
-            //     this.bomb.bomb.style.animationPlayState = "initial"
-            //     this.bomb.bomb.style.animationDuration = `2.3s`
+            }
+            if (score == 300){
+                this.background.style.animationDelay = "-1.005s"
+                this.background.style.animationDuration = `375000000s`
+                this.bomb.bomb.style.animationDelay = "-1.005s"
+                this.bomb.bomb.style.animationDuration = `0.625s`
                 
-            // }
-            // if (score == 225){
-            //     this.background.style.animationDuration = `1275000000s`
-            //     this.bomb.bomb.style.animationPlayState = "initial"
-            //     this.bomb.bomb.style.animationDuration = `2.125s`
-                
-            // }
-            // if (score == 75){
-            //     this.background.style.animationDuration = `1425000000s`
-            //     this.bomb.bomb.style.animationDuration = `2.375s`
-                
-            // }
+            }
 
           
             if (score > highscore){

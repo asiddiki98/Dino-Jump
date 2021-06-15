@@ -84,6 +84,7 @@ html{
         transition: 0.3s;
         &:hover{
             transform: scale(1.1);
+            
         }
     }
    
@@ -97,15 +98,27 @@ html{
             position: absolute;
             border-radius: 10px;
             z-index: 1000;
+            box-shadow: 2px 2px 2px #1500ff, 2px 1px 44px #1500ff;
 
             &:hover{
                 display: inline-block;
             }
+
             .info{
-                padding: 10px;
+                padding: 20px;
+                padding-top: 0;
                 color: white;
                 font-family: 'Luckiest Guy', cursive;
                 text-shadow: 1px 1px 0px #1500ff;
+            }
+            .title{
+                padding-bottom: 10px;
+                text-decoration: underline;
+                margin-left: 60px;
+                padding-top: 20px;
+                font-family: 'Bangers', cursive;
+                text-shadow: 1px 1px 0px #1500ff;
+                
             }
         }
     }
