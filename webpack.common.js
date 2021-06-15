@@ -77,6 +77,7 @@ module.exports = {
           "postcss-loader",
         ],
       },
+      
     ],
   },
   plugins: [

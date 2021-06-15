@@ -1,3 +1,6 @@
+@import './variables.scss';
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -257,9 +260,9 @@ html{
         width: 1090px;
         border-radius: 10px;
         margin: auto;
-        $speed: 1000s;
+      
         box-shadow:2px 2px 2px #1500ff, 1px 1px 44px #1500ff;
-        animation: animate $speed linear infinite;
+        animation: animate $bgspeed linear infinite;
         .start-game{
             display: none;
         }
@@ -278,7 +281,8 @@ html{
             margin: 0;
         }
         .jump-animation{
-            animation: jump 0.5s;
+
+            animation: jump $jumpspeed;
         }
 
         .bomb{
@@ -292,19 +296,7 @@ html{
             position: relative;
             left: 100%;
             margin: 0;
-            animation: move 1.5s infinite;
-        }
-        .exploded{
-            height: 20%;
-            width: 15%;
-            background-image: url("../images/explosion.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            top: 63%;
-             position: relative;
-            left: 30%;
-            margin: 0;
-            animation: move 0.0s infinite; 
+            animation: move $bombspeed infinite linear;
         }
     }
 }
@@ -323,27 +315,30 @@ html{
     }
 
     100%{
-        background-position: -1000000px;
+        background-position: -670800000000px;
     }
 }
 @keyframes jump{
     0%{
         top: 80%;
         background-image: url("../images/jump.gif");
+        transform: scale(1.7);
     }
 
     30%{
-        top: 20%;
+        top: 60%;
         background-image: url("../images/jump.gif");
+        transform: scale(1.7);
     }
     50%{
-        top: 10%;
+        top: 40%;
         background-image: url("../images/jump.gif");
-        transform: scale(1.5);
+        transform: scale(1.7);
     }
     80%{
-        top: 20%;
+        top: 60%;
         background-image: url("../images/jump.gif");
+        transform: scale(1.7);
     }
     100%{
         top: 80%;

@@ -1,0 +1,9 @@
+$bgspeed: 1500000000s;
+$bombspeed: 2.5s;
+$jumpspeed: 0.5s;
+
+:export{
+    bgspeed: $bgspeed;
+    bombspeed: $bombspeed;
+    jumpspeed: $jumpspeed;
+}
