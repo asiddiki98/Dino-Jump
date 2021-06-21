@@ -7,8 +7,12 @@ let start = document.getElementById("start-button")
 
 start.onclick = () => game.play() 
 
-document.addEventListener("keypress", (e) => {
-    if (e.code === 'Enter'){
-        game.play()
-    }
-})
+const enter = function(e) {
+        if (e.code === 'Enter') {
+            game.play()
+        }
+}
+
+document.addEventListener("keypress", enter)
+
+export default enter

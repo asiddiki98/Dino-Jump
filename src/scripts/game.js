@@ -3,7 +3,7 @@ import variables from "../styles/variables.scss"
 import "../styles/index.scss";
 import Bomb from './bomb'
 import Dino from './dino'
-
+import event from '../index'
 
 class Game{
     constructor(){
@@ -16,10 +16,11 @@ class Game{
     }
 
     play(){
-        this.background.style.animationDelay = "0s"
-        this.background.style.animationDuration = "1500000000s"
-        this.bomb.bomb.style.animationDelay="0s"
-        this.bomb.bomb.style.animationDuration = "2.5s"
+        document.removeEventListener("keypress", event);
+        this.background.style.animationDelay = "0s";
+        this.background.style.animationDuration = "1500000000s";
+        this.bomb.bomb.style.animationDelay="0s";
+        this.bomb.bomb.style.animationDuration = "2.5s";
 
         if (document.getElementById("game-component").classList.contains("game-component")){
             document.getElementById("game-component").classList.remove("game-component")
@@ -36,27 +37,33 @@ class Game{
             this.score.innerText = `${score++} : score`;
             this.instruction.innerText = ` your score was ${score - 1}!\n you can do better :P \n play again?`;
             this.instruction.innerHTML = this.instruction.innerHTML.replace(`${score - 1}`, `<span style="color: skyblue;">${score - 1}</span>`);
-            if (score == 150){
-                this.background.style.animationDelay = "-1.005s"
-                this.background.style.animationDuration = `750000000s`
-                this.bomb.bomb.style.animationDelay = "-1.005s"
-                this.bomb.bomb.style.animationDuration = `1.25s`
-
-                
+            
+            
+            
+            if (score == 100){
+                this.background.style.animationDelay = "-1.2s";
+                this.background.style.animationDuration = `1125000000s`;
+                this.bomb.bomb.style.animationDelay = "-1.2s";
+                this.bomb.bomb.style.animationDuration = `1.875s`;
+            }
+            if (score == 200){
+                this.background.style.animationDelay = "-0.29s";
+                this.background.style.animationDuration = `750000000s`;
+                this.bomb.bomb.style.animationDelay = "-0.29s";
+                this.bomb.bomb.style.animationDuration = `1.25s`;      
             }
             if (score == 300){
-                this.background.style.animationDelay = "0.8s"
-                this.background.style.animationDuration = `562500000s`
-                this.bomb.bomb.style.animationDelay = "-0.8s"
-                this.bomb.bomb.style.animationDuration = `0.9375s`
+                this.background.style.animationDelay = "-0.1s";
+                this.background.style.animationDuration = `562500000s`;
+                this.bomb.bomb.style.animationDelay = "-0.1s";
+                this.bomb.bomb.style.animationDuration = `0.9375s`;
                 
             }
             if (score == 500) {
-                this.background.style.animationDelay = "0.8s"
-                this.background.style.animationDuration = `375000000s`
-                this.bomb.bomb.style.animationDelay = "-0.8s"
-                this.bomb.bomb.style.animationDuration = `0.625s`
-
+                this.background.style.animationDelay = "0.8s";
+                this.background.style.animationDuration = `375000000s`;
+                this.bomb.bomb.style.animationDelay = "-0.8s";
+                this.bomb.bomb.style.animationDuration = `0.625s`;
             }
             if (score > highscore){
                 this.highscore.innerText = `${highscore++} : highscore`;
@@ -95,10 +102,12 @@ class Game{
 
 
     lost(){
+       
         if (document.getElementById("game-component").classList.contains("play-game-component")) {
             document.getElementById("game-component").classList.remove("play-game-component")
             document.getElementById("game-component").classList.add("game-component")
             this.score.innerText = "0 : score";
+            document.addEventListener("keypress", event);
             return true
         } else {
             return false
