@@ -1,5 +1,4 @@
 
-import variables from "../styles/variables.scss"
 import "../styles/index.scss";
 import Bomb from './bomb'
 import Dino from './dino'
