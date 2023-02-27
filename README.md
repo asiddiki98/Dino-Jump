@@ -1,5 +1,5 @@
 # Dino Might
-Dino Might is a game created using Vanilla JavaScript and CSS. Press spacebar to jump over the dynamite and avoid getting blasted to bits. As you your score gets higher, the dynamite will come at you faster and faster. Time your jumps accurately to make sure you dont get blown into extinction.
+Dino Might is a game created using Vanilla JavaScript and CSS. Press spacebar to jump over the dynamite and avoid getting blasted to bits. As your score gets higher, the dynamite will come at you faster and faster. Time your jumps accurately to make sure you dont get blown into extinction.
 
 
 [Live Demo](https://asiddiki98.github.io/Dino-Might/)
